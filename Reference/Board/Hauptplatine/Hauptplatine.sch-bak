@@ -1,0 +1,779 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 7
+Title "Hauptplatine"
+Date "16.07.2020"
+Rev "0"
+Comp ""
+Comment1 "Hel"
+Comment2 ""
+Comment3 "Signalgenerator"
+Comment4 ""
+$EndDescr
+$Sheet
+S 3600 1800 1250 1500
+U 5DBF7117
+F0 "Reference" 50
+F1 "reference.sch" 50
+F2 "SLE" I L 3600 2750 50 
+F3 "SDA" I L 3600 2550 50 
+F4 "SCK" I L 3600 2650 50 
+F5 "Ref-Lock" O R 4850 3150 50 
+F6 "Ext-Ref" I L 3600 1950 50 
+F7 "Ref-Out" O R 4850 1950 50 
+F8 "CS-Ref-PLL" I L 3600 2850 50 
+F9 "Int-Sel" I L 3600 3050 50 
+F10 "Ext-Sel" I L 3600 3150 50 
+$EndSheet
+$Sheet
+S 6350 1800 1250 1500
+U 5D7C1AE2
+F0 "PLL and DDS" 50
+F1 "pll-dds.sch" 50
+F2 "SDA" I L 6350 2450 50 
+F3 "PLL-Out" O R 7600 1950 50 
+F4 "PLL-Mux" O R 7600 3150 50 
+F5 "SCK" I L 6350 2550 50 
+F6 "SLE" I L 6350 2650 50 
+F7 "M-Lock" O R 7600 3050 50 
+F8 "Ref-In" I L 6350 1950 50 
+F9 "DDS-Reset" I L 6350 3150 50 
+F10 "~CS-DDS" I L 6350 2750 50 
+F11 "CS-M-PLL" I L 6350 2850 50 
+F12 "DDS-Update" I L 6350 3050 50 
+$EndSheet
+$Sheet
+S 9100 1800 1250 1500
+U 5D929343
+F0 "Harmonic Filter" 50
+F1 "filter.sch" 50
+F2 "RF-In" I L 9100 1950 50 
+F3 "RF-Out" O R 10350 1950 50 
+F4 "FSW-A" I L 9100 2550 50 
+F5 "FSW-B" I L 9100 2650 50 
+F6 "FSW-C" I L 9100 2750 50 
+F7 "Level-Ctrl" I L 9100 3150 50 
+F8 "Bypass" I L 9100 2850 50 
+$EndSheet
+$Sheet
+S 11850 1800 1250 1500
+U 5D932121
+F0 "Output Amp and Leveling" 50
+F1 "leveling.sch" 50
+F2 "RF-In" I L 11850 1950 50 
+F3 "RF-Out" O R 13100 1950 50 
+F4 "ATT-D0" I L 11850 2550 50 
+F5 "ATT-D1" I L 11850 2650 50 
+F6 "ATT-D2" I L 11850 2750 50 
+F7 "ATT-D3" I L 11850 2850 50 
+F8 "ATT-LE" I L 11850 2950 50 
+F9 "Unlvld" O R 13100 2950 50 
+F10 "Level-Ctrl" O R 13100 3150 50 
+F11 "DAC" I L 11850 3150 50 
+$EndSheet
+$Sheet
+S 3600 4300 1250 3000
+U 5D9321A2
+F0 "Controller" 50
+F1 "controller.sch" 50
+F2 "UPDI" B L 3600 4450 50 
+F3 "USB-D+" B L 3600 6450 50 
+F4 "USB-D-" B L 3600 6550 50 
+F5 "USB-VBUS" U L 3600 6250 50 
+F6 "SDA" O R 4850 4600 50 
+F7 "SCK" O R 4850 4700 50 
+F8 "SLE" O R 4850 4800 50 
+F9 "DDS-Reset" O R 4850 6350 50 
+F10 "CS-M-PLL" O R 4850 5050 50 
+F11 "~CS-DDS" O R 4850 5150 50 
+F12 "CS-Ref-PLL" O R 4850 4950 50 
+F13 "Ref-Lock" I R 4850 6450 50 
+F14 "M-Lock" I R 4850 6550 50 
+F15 "PLL-Mux" I R 4850 6650 50 
+F16 "FSW-A" O R 4850 5300 50 
+F17 "FSW-B" O R 4850 5400 50 
+F18 "FSW-C" O R 4850 5500 50 
+F19 "Unlvld" I R 4850 6750 50 
+F20 "ATT-D0" O R 4850 5700 50 
+F21 "ATT-D1" O R 4850 5800 50 
+F22 "ATT-D2" O R 4850 5900 50 
+F23 "ATT-D3" O R 4850 6000 50 
+F24 "ATT-LE" O R 4850 6100 50 
+F25 "DAC" O R 4850 4450 50 
+F26 "Int-Sel" O R 4850 6850 50 
+F27 "Ext-Sel" O R 4850 6950 50 
+F28 "DDS-Update" O R 4850 6250 50 
+F29 "FP-LED-red" O R 4850 7050 50 
+F30 "FP-LED-grn" O R 4850 7150 50 
+F31 "Bypass" O R 4850 5600 50 
+$EndSheet
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 5DCFFF32
+P 2400 1950
+F 0 "J1" H 2410 2070 50  0000 C CNN
+F 1 "SMA" V 2515 1950 50  0001 C CNN
+F 2 "connectors:SMA-Jack_angle" H 2400 1950 50  0001 C CNN
+F 3 " ~" H 2400 1950 50  0001 C CNN
+	1    2400 1950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 1950 3600 1950
+$Comp
+L mario_aux:GND #GND01
+U 1 1 5DD009E4
+P 2400 2250
+F 0 "#GND01" H 2400 2080 50  0001 C CNN
+F 1 "GND" H 2400 2150 50  0000 C CNN
+F 2 "" H 2400 2200 50  0001 C CNN
+F 3 "" H 2400 2200 50  0001 C CNN
+	1    2400 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 2150 2400 2250
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 5DD01EF2
+P 14300 1950
+F 0 "J2" H 14310 2070 50  0000 C CNN
+F 1 "Cinch 142-0781-821" V 14415 1950 50  0001 C CNN
+F 2 "connectors:SMA-Launcher_Cinch_142-0771-831" H 14300 1950 50  0001 C CNN
+F 3 " ~" H 14300 1950 50  0001 C CNN
+	1    14300 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13100 1950 14100 1950
+$Comp
+L mario_aux:GND #GND02
+U 1 1 5DD01EF9
+P 14300 2250
+F 0 "#GND02" H 14300 2080 50  0001 C CNN
+F 1 "GND" H 14300 2150 50  0000 C CNN
+F 2 "" H 14300 2200 50  0001 C CNN
+F 3 "" H 14300 2200 50  0001 C CNN
+	1    14300 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14300 2150 14300 2250
+Wire Wire Line
+	10350 1950 11850 1950
+Wire Wire Line
+	7600 1950 9100 1950
+Wire Wire Line
+	4850 1950 6350 1950
+Wire Wire Line
+	3600 2550 2950 2550
+Text Label 2950 2550 0    50   ~ 0
+SDA
+Wire Wire Line
+	3600 2650 2950 2650
+Wire Wire Line
+	3600 2750 2950 2750
+Wire Wire Line
+	3600 2850 2950 2850
+Text Label 2950 2650 0    50   ~ 0
+SCK
+Text Label 2950 2750 0    50   ~ 0
+SLE
+Text Label 2950 2850 0    50   ~ 0
+CS-Ref-PLL
+Wire Wire Line
+	6350 2450 5700 2450
+Text Label 5700 2450 0    50   ~ 0
+SDA
+Wire Wire Line
+	6350 2550 5700 2550
+Wire Wire Line
+	6350 2650 5700 2650
+Wire Wire Line
+	6350 2750 5700 2750
+Text Label 5700 2550 0    50   ~ 0
+SCK
+Text Label 5700 2650 0    50   ~ 0
+SLE
+Text Label 5700 2750 0    50   ~ 0
+~CS-DDS
+Wire Wire Line
+	6350 2850 5700 2850
+Text Label 5700 2850 0    50   ~ 0
+CS-M-PLL
+Wire Wire Line
+	6350 3150 5700 3150
+Text Label 5700 3150 0    50   ~ 0
+DDS-Reset
+Wire Wire Line
+	9100 2550 8450 2550
+Text Label 8450 2550 0    50   ~ 0
+FSW-A
+Wire Wire Line
+	9100 2650 8450 2650
+Wire Wire Line
+	9100 2750 8450 2750
+Text Label 8450 2650 0    50   ~ 0
+FSW-B
+Text Label 8450 2750 0    50   ~ 0
+FSW-C
+Wire Wire Line
+	13100 3150 13300 3150
+Wire Wire Line
+	13300 3150 13300 3850
+Wire Wire Line
+	13300 3850 8900 3850
+Wire Wire Line
+	8900 3850 8900 3150
+Wire Wire Line
+	8900 3150 9100 3150
+Wire Wire Line
+	4850 4450 11650 4450
+Wire Wire Line
+	11650 4450 11650 3150
+Wire Wire Line
+	11650 3150 11850 3150
+Wire Wire Line
+	4850 4600 5750 4600
+Wire Wire Line
+	4850 4700 5750 4700
+Wire Wire Line
+	4850 4800 5750 4800
+Text Label 5750 4700 2    50   ~ 0
+SCK
+Text Label 5750 4800 2    50   ~ 0
+SLE
+Wire Wire Line
+	4850 4950 5750 4950
+Text Label 5750 4950 2    50   ~ 0
+CS-Ref-PLL
+Wire Wire Line
+	4850 5050 5750 5050
+Text Label 5750 5050 2    50   ~ 0
+CS-M-PLL
+Wire Wire Line
+	4850 5150 5750 5150
+Text Label 5750 5150 2    50   ~ 0
+~CS-DDS
+Wire Wire Line
+	4850 5300 5750 5300
+Text Label 5750 5300 2    50   ~ 0
+FSW-A
+Wire Wire Line
+	4850 5400 5750 5400
+Wire Wire Line
+	4850 5500 5750 5500
+Text Label 5750 5400 2    50   ~ 0
+FSW-B
+Text Label 5750 5500 2    50   ~ 0
+FSW-C
+Wire Wire Line
+	11850 2550 11250 2550
+Text Label 11250 2550 0    50   ~ 0
+ATT-D0
+Wire Wire Line
+	11850 2650 11250 2650
+Wire Wire Line
+	11850 2750 11250 2750
+Wire Wire Line
+	11850 2850 11250 2850
+Text Label 11250 2650 0    50   ~ 0
+ATT-D1
+Text Label 11250 2750 0    50   ~ 0
+ATT-D2
+Text Label 11250 2850 0    50   ~ 0
+ATT-D3
+Wire Wire Line
+	11850 2950 11250 2950
+Text Label 11250 2950 0    50   ~ 0
+ATT-LE
+Wire Wire Line
+	4850 5700 5750 5700
+Text Label 5750 5700 2    50   ~ 0
+ATT-D0
+Wire Wire Line
+	4850 5800 5750 5800
+Wire Wire Line
+	4850 5900 5750 5900
+Wire Wire Line
+	4850 6000 5750 6000
+Text Label 5750 5800 2    50   ~ 0
+ATT-D1
+Text Label 5750 5900 2    50   ~ 0
+ATT-D2
+Text Label 5750 6000 2    50   ~ 0
+ATT-D3
+Wire Wire Line
+	4850 6100 5750 6100
+Text Label 5750 6100 2    50   ~ 0
+ATT-LE
+Wire Wire Line
+	4850 6350 5750 6350
+Text Label 5750 6350 2    50   ~ 0
+DDS-Reset
+Wire Wire Line
+	7600 3050 8250 3050
+Text Label 8250 3050 2    50   ~ 0
+M-Lock
+Wire Wire Line
+	7600 3150 8250 3150
+Text Label 8250 3150 2    50   ~ 0
+PLL-Mux
+Wire Wire Line
+	4850 6550 5750 6550
+Text Label 5750 6550 2    50   ~ 0
+M-Lock
+Wire Wire Line
+	4850 6650 5750 6650
+Text Label 5750 6650 2    50   ~ 0
+PLL-Mux
+Wire Wire Line
+	4850 3150 5500 3150
+Text Label 5500 3150 2    50   ~ 0
+Ref-Lock
+Wire Wire Line
+	4850 6450 5750 6450
+Text Label 5750 6450 2    50   ~ 0
+Ref-Lock
+Wire Wire Line
+	13100 2950 13700 2950
+Text Label 13700 2950 2    50   ~ 0
+Unlvld
+Wire Wire Line
+	4850 6750 5750 6750
+Text Label 5750 6750 2    50   ~ 0
+Unlvld
+Wire Wire Line
+	3600 6250 2700 6250
+Wire Wire Line
+	3600 6450 2700 6450
+Wire Wire Line
+	2700 6550 3600 6550
+$Comp
+L mario_aux:GND #GND04
+U 1 1 5DDA6A80
+P 2400 7000
+F 0 "#GND04" H 2400 6830 50  0001 C CNN
+F 1 "GND" H 2400 6900 50  0000 C CNN
+F 2 "" H 2400 6950 50  0001 C CNN
+F 3 "" H 2400 6950 50  0001 C CNN
+	1    2400 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 6850 2400 6900
+Wire Wire Line
+	2400 6900 2300 6900
+Wire Wire Line
+	2300 6900 2300 6850
+Connection ~ 2400 6900
+Wire Wire Line
+	2400 6900 2400 7000
+$Comp
+L Connector_Generic:Conn_01x06 J3
+U 1 1 5DDB0DF7
+P 2400 4650
+F 0 "J3" H 2400 4950 50  0000 C CNN
+F 1 "Conn_01x06" H 2400 4250 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical" H 2400 4650 50  0001 C CNN
+F 3 "~" H 2400 4650 50  0001 C CNN
+	1    2400 4650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 4450 3600 4450
+Wire Wire Line
+	2600 4550 2800 4550
+Wire Wire Line
+	2800 4550 2800 4250
+Wire Wire Line
+	2600 4950 2800 4950
+Wire Wire Line
+	2800 4950 2800 5050
+$Comp
+L Device:C C1
+U 1 1 5DDB7F4A
+P 2800 4750
+F 0 "C1" H 2825 4850 50  0000 L CNN
+F 1 "100n" H 2825 4650 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2838 4600 50  0001 C CNN
+F 3 "~" H 2800 4750 50  0001 C CNN
+	1    2800 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 4550 2800 4600
+Connection ~ 2800 4550
+Wire Wire Line
+	2800 4900 2800 4950
+Connection ~ 2800 4950
+$Comp
+L mario_aux:GND #GND03
+U 1 1 5DDBC38B
+P 2800 5050
+F 0 "#GND03" H 2800 4880 50  0001 C CNN
+F 1 "GND" H 2800 4950 50  0000 C CNN
+F 2 "" H 2800 5000 50  0001 C CNN
+F 3 "" H 2800 5000 50  0001 C CNN
+	1    2800 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR01
+U 1 1 5DDBEEC7
+P 2800 4250
+F 0 "#PWR01" H 2800 4100 50  0001 C CNN
+F 1 "+3.3V" H 2800 4390 50  0000 C CNN
+F 2 "" H 2800 4250 50  0001 C CNN
+F 3 "" H 2800 4250 50  0001 C CNN
+	1    2800 4250
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2600 4650
+NoConn ~ 2600 4750
+NoConn ~ 2600 4850
+Text Notes 1600 4550 0    50   ~ 0
+ISP \nConnector
+Text Notes 1600 6500 0    50   ~ 0
+USB \nInterface
+Text Notes 1600 2000 0    50   ~ 0
+Ext. Ref.\nin
+Text Notes 14700 2000 0    50   ~ 0
+RF\nout
+$Comp
+L Connector:USB_A J4
+U 1 1 5DD9F0F2
+P 2400 6450
+F 0 "J4" H 2400 6900 50  0000 C CNN
+F 1 "Würth 614 004 190 021" H 2400 6800 50  0000 C CNN
+F 2 "Connector_USB:USB_A_Stewart_SS-52100-001_Horizontal" H 2550 6400 50  0001 C CNN
+F 3 " ~" H 2550 6400 50  0001 C CNN
+	1    2400 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3050 2950 3050
+Wire Wire Line
+	3600 3150 2950 3150
+Text Label 2950 3050 0    50   ~ 0
+Int-Sel
+Text Label 2950 3150 0    50   ~ 0
+Ext-Sel
+Wire Wire Line
+	4850 6850 5750 6850
+Wire Wire Line
+	4850 6950 5750 6950
+Text Label 5750 6850 2    50   ~ 0
+Int-Sel
+Text Label 5750 6950 2    50   ~ 0
+Ext-Sel
+Entry Wire Line
+	5600 2550 5700 2450
+Entry Wire Line
+	5600 2650 5700 2550
+Entry Wire Line
+	5600 2750 5700 2650
+Entry Wire Line
+	5600 2850 5700 2750
+Entry Wire Line
+	5600 2950 5700 2850
+Entry Wire Line
+	5600 3250 5700 3150
+Entry Wire Line
+	5500 3150 5600 3250
+Entry Wire Line
+	8350 2650 8450 2550
+Entry Wire Line
+	8350 2750 8450 2650
+Entry Wire Line
+	8350 2850 8450 2750
+Entry Wire Line
+	11150 2650 11250 2550
+Entry Wire Line
+	11150 2750 11250 2650
+Entry Wire Line
+	11150 2850 11250 2750
+Entry Wire Line
+	11150 2950 11250 2850
+Entry Wire Line
+	11150 3050 11250 2950
+Entry Wire Line
+	8350 3150 8250 3050
+Entry Wire Line
+	8350 3250 8250 3150
+Entry Wire Line
+	13700 2950 13800 3050
+Wire Bus Line
+	13800 3050 13800 3500
+Entry Wire Line
+	2850 2650 2950 2550
+Entry Wire Line
+	2850 2750 2950 2650
+Entry Wire Line
+	2850 2850 2950 2750
+Entry Wire Line
+	2850 2950 2950 2850
+Entry Wire Line
+	2850 3150 2950 3050
+Entry Wire Line
+	2850 3250 2950 3150
+Entry Bus Bus
+	2850 3500 2950 3600
+Entry Bus Bus
+	5600 3500 5500 3600
+Entry Bus Bus
+	8350 3500 8250 3600
+Entry Bus Bus
+	11150 3500 11050 3600
+Entry Bus Bus
+	13700 3600 13800 3500
+Entry Wire Line
+	5750 4600 5850 4500
+Entry Wire Line
+	5750 4700 5850 4600
+Entry Wire Line
+	5750 4800 5850 4700
+Entry Wire Line
+	5750 4950 5850 4850
+Entry Wire Line
+	5750 5050 5850 4950
+Entry Wire Line
+	5750 5150 5850 5050
+Entry Wire Line
+	5750 5300 5850 5200
+Entry Wire Line
+	5750 5400 5850 5300
+Entry Wire Line
+	5750 5500 5850 5400
+Entry Wire Line
+	5750 5700 5850 5600
+Entry Wire Line
+	5750 5900 5850 5800
+Entry Wire Line
+	5750 6000 5850 5900
+Entry Wire Line
+	5750 6100 5850 6000
+Entry Wire Line
+	5750 5800 5850 5700
+Entry Wire Line
+	5750 6450 5850 6350
+Entry Wire Line
+	5750 6550 5850 6450
+Entry Wire Line
+	5750 6750 5850 6650
+Entry Wire Line
+	5750 6850 5850 6750
+Entry Wire Line
+	5750 6950 5850 6850
+Entry Wire Line
+	5750 6650 5850 6550
+Entry Wire Line
+	5750 6350 5850 6250
+Entry Bus Bus
+	5850 3700 5950 3600
+Text Label 5750 4600 2    50   ~ 0
+SDA
+Entry Wire Line
+	5600 3150 5700 3050
+Wire Wire Line
+	6350 3050 5700 3050
+Text Label 5700 3050 0    50   ~ 0
+DDS-Update
+Entry Wire Line
+	5750 6250 5850 6150
+Wire Wire Line
+	5750 6250 4850 6250
+Text Label 5750 6250 2    50   ~ 0
+DDS-Update
+$Comp
+L mario_aux:GND #GND?
+U 1 1 5E2F97D7
+P 5750 8350
+AR Path="/5DCD3CB2/5E2F97D7" Ref="#GND?"  Part="1" 
+AR Path="/5E2F97D7" Ref="#GND05"  Part="1" 
+F 0 "#GND05" H 5750 8180 50  0001 C CNN
+F 1 "GND" H 5750 8250 50  0000 C CNN
+F 2 "" H 5750 8300 50  0001 C CNN
+F 3 "" H 5750 8300 50  0001 C CNN
+	1    5750 8350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 7550 5850 7650
+Wire Wire Line
+	5750 8250 5750 8350
+Text Notes 6150 8000 0    50   ~ 0
+Power On / Status\n(Front Panel)
+Wire Wire Line
+	4850 7050 5850 7050
+Wire Wire Line
+	5850 7050 5850 7250
+$Sheet
+S 3600 8300 1250 1500
+U 5DCD3CB2
+F0 "Power Supply" 50
+F1 "supply.sch" 50
+F2 "V-Sply-A" U L 3600 8900 50 
+F3 "V-Sply-D" U L 3600 9200 50 
+$EndSheet
+$Comp
+L mario_aux:GND #GND06
+U 1 1 5E222241
+P 3000 9400
+F 0 "#GND06" H 3000 9230 50  0001 C CNN
+F 1 "GND" H 3000 9300 50  0000 C CNN
+F 2 "" H 3000 9350 50  0001 C CNN
+F 3 "" H 3000 9350 50  0001 C CNN
+	1    3000 9400
+	1    0    0    -1  
+$EndComp
+Text Notes 1600 9000 0    50   ~ 0
+Supply
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E274992
+P 3000 8750
+F 0 "#FLG01" H 3000 8825 50  0001 C CNN
+F 1 "PWR_FLAG" H 3000 8900 50  0001 C CNN
+F 2 "" H 3000 8750 50  0001 C CNN
+F 3 "~" H 3000 8750 50  0001 C CNN
+	1    3000 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Barrel_Jack_Switch J5
+U 1 1 5E282968
+P 2400 9000
+F 0 "J5" H 2400 9300 50  0000 C CNN
+F 1 "Würth 694 108 301 002" H 2400 9200 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 2450 8960 50  0001 C CNN
+F 3 "~" H 2450 8960 50  0001 C CNN
+	1    2400 9000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 8750 3000 9000
+Wire Wire Line
+	2700 8900 3300 8900
+Wire Wire Line
+	3600 9200 3300 9200
+Wire Wire Line
+	3300 9200 3300 8900
+Connection ~ 3300 8900
+Wire Wire Line
+	3300 8900 3600 8900
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5E293F14
+P 3300 8750
+F 0 "#FLG02" H 3300 8825 50  0001 C CNN
+F 1 "PWR_FLAG" H 3300 8900 50  0001 C CNN
+F 2 "" H 3300 8750 50  0001 C CNN
+F 3 "~" H 3300 8750 50  0001 C CNN
+	1    3300 8750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 8750 3300 8900
+Wire Wire Line
+	2700 9100 3000 9100
+Connection ~ 3000 9100
+Wire Wire Line
+	3000 9100 3000 9400
+Wire Wire Line
+	2700 9000 3000 9000
+Connection ~ 3000 9000
+Wire Wire Line
+	3000 9000 3000 9100
+Wire Wire Line
+	4850 7150 5650 7150
+Wire Wire Line
+	5650 7150 5650 7250
+Wire Wire Line
+	5650 7550 5650 7650
+$Comp
+L Device:R R?
+U 1 1 5E33E0C0
+P 5650 7400
+AR Path="/5DCD3CB2/5E33E0C0" Ref="R?"  Part="1" 
+AR Path="/5E33E0C0" Ref="R1"  Part="1" 
+F 0 "R1" V 5730 7400 50  0000 C CNN
+F 1 "270" V 5650 7400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5580 7400 50  0001 C CNN
+F 3 "~" H 5650 7400 50  0001 C CNN
+	1    5650 7400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E2F97CA
+P 5850 7400
+AR Path="/5DCD3CB2/5E2F97CA" Ref="R?"  Part="1" 
+AR Path="/5E2F97CA" Ref="R2"  Part="1" 
+F 0 "R2" V 5930 7400 50  0000 C CNN
+F 1 "270" V 5850 7400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5780 7400 50  0001 C CNN
+F 3 "~" H 5850 7400 50  0001 C CNN
+	1    5850 7400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED_Dual_ACA D1
+U 1 1 5E321BB2
+P 5750 7950
+F 0 "D1" V 5800 7550 50  0000 C CNN
+F 1 "WP3VEGW" V 5700 7550 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm-3" H 5750 7950 50  0001 C CNN
+F 3 "~" H 5750 7950 50  0001 C CNN
+	1    5750 7950
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5E75FC14
+P 3100 4750
+AR Path="/5DCD3CB2/5E75FC14" Ref="C?"  Part="1" 
+AR Path="/5E75FC14" Ref="C2"  Part="1" 
+F 0 "C2" H 3125 4850 50  0000 L CNN
+F 1 "100µ" H 3125 4650 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 3138 4600 50  0001 C CNN
+F 3 "~" H 3100 4750 50  0001 C CNN
+	1    3100 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 4550 3100 4550
+Wire Wire Line
+	3100 4550 3100 4600
+Wire Wire Line
+	2800 4950 3100 4950
+Wire Wire Line
+	3100 4950 3100 4900
+Wire Wire Line
+	8450 2850 9100 2850
+Entry Wire Line
+	8450 2850 8350 2950
+Text Label 8450 2850 0    50   ~ 0
+Bypass
+Wire Wire Line
+	4850 5600 5750 5600
+Entry Wire Line
+	5750 5600 5850 5500
+Text Label 5750 5600 2    50   ~ 0
+Bypass
+Wire Bus Line
+	11150 2650 11150 3500
+Wire Bus Line
+	5600 2550 5600 3500
+Wire Bus Line
+	8350 2650 8350 3500
+Wire Bus Line
+	2850 2650 2850 3500
+Wire Bus Line
+	2950 3600 13700 3600
+Wire Bus Line
+	5850 3700 5850 6850
+$EndSCHEMATC

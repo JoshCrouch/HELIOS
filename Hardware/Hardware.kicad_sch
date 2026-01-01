@@ -49,7 +49,7 @@
 		)
 	)
 	(sheet
-		(at 93.98 25.4)
+		(at 147.32 25.4)
 		(size 25.4 25.4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -66,7 +66,7 @@
 		)
 		(uuid "aec78af5-c89c-41da-9ea1-7a4144ae4673")
 		(property "Sheetname" "LO"
-			(at 93.98 24.6884 0)
+			(at 147.32 24.6884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -75,7 +75,7 @@
 			)
 		)
 		(property "Sheetfile" "LO.kicad_sch"
-			(at 93.98 51.3846 0)
+			(at 147.32 51.3846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
